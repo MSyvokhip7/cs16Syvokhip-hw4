@@ -8,9 +8,9 @@ public interface Trie {
 
     public boolean delete(String word);
 
-    public Iterable<String> words();
+    public Iterable words();
 
-    public Iterable<String> wordsWithPrefix(String pref);
+    public Iterable wordsWithPrefix(String pref);
     
     public int size();
 }
