@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 
 /**
- * Created by TheOriginMS7 on 08.01.2017.
+ * Created by TheOriginMS7 on 04.01.2017.
  */
 public class Queue<Item> implements Iterable<Item>{
     public ImmutableLinkedList myList = new ImmutableLinkedList();
