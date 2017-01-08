@@ -33,26 +33,21 @@ public class Queue<Item> implements Iterable<Item>{
         return null;
     }
 
-    public Iterable<String> toIterable() {
-        return new Iterable<String>() {
+     public Iterable<String> toIterable() {
+        return () -> new Iterator<String>() {
             @Override
-            public Iterator<String> iterator() {
-                return new Iterator<String>() {
-                    @Override
-                    public boolean hasNext() {
-                        return !isEmpty();
-                    }
+            public boolean hasNext() {
+                return !isEmpty();
+            }
 
-                    @Override
-                    public String next() {
-                        return dequeue();
-                    }
+            @Override
+            public String next() {
+                return dequeue();
+            }
 
-                    @Override
-                    public void remove() {
-                        throw new UnsupportedOperationException();
-                    }
-                };
+            @Override
+            public void remove() {
+                throw new UnsupportedOperationException();
             }
         };
     }
